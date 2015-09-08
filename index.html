@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Github Formulario" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>Github formulario</title>
+		<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis:500,800' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		
+	</head>
+	<body>
+		<form id="formulario">
+			<input type="text" placeholder="Nombre" />
+			<input type="email" name="email" id="email" placeholder="ingese su correo"/>
+			<textarea name="consulta" id="consulta"/></textarea>
+			<button type="submit" value="enviar" >READY</button>
+		</form>
+	</body>
+	<script src="https://raw.githubusercontent.com/matmancini/html5form/master/dist/html5form.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#formulario').html5form();
+		});
+
+	</script>
+	<script>
+
+	    //mensajes predeterminados en Español
+	    $('#formulario').html5form({
+
+	        messages : 'es', // Opciones 'en', 'es', 'it', 'de', 'fr', 'nl', 'be', 'br'
+	        responseDiv : '#respuesta'
+
+	    })
+
+	    //método personalizado. tiene prioridad sobre los mensajes predeterminados
+	    $('#formulario').html5form({
+
+	        emptyMessage : 'Este campo es obligatorio',
+	        emailMessage : 'La dirección de correo ingresada es incorrecta',
+	        responseDiv : '#respuesta'
+
+	    });
+
+	</script>
+</html>
